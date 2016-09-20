@@ -110,6 +110,14 @@ PRODUCT_PACKAGES += \
     hwcomposer.msm8974 \
     memtrack.msm8974
 
+# Doze
+PRODUCT_PACKAGES += \
+    MotoDoze
+
+# Gello
+PRODUCT_PACKAGES += \
+    Gello
+
 # GPS
 PRODUCT_PACKAGES += \
     gps.msm8974
@@ -200,10 +208,6 @@ PRODUCT_COPY_FILES += \
 # Thermal
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/thermal-engine-8974.conf:system/etc/thermal-engine-8974.conf
-
-# Doze mode
-PRODUCT_PACKAGES += \
-    OneplusDoze
 
 # Touchscreen
 PRODUCT_COPY_FILES += \
