@@ -13,6 +13,10 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 #
+# Toolchain
+TARGET_GCC_VERSION_EXP := 4.9
+KERNEL_TOOLCHAIN_PREFIX := arm-eabi-
+KERNEL_TOOLCHAIN := "$(ANDROID_BUILD_TOP)/prebuilts/gcc/$(HOST_OS)-x86/arm/arm-eabi-4.9/bin/"
 
 
 TARGET_SPECIFIC_HEADER_PATH := device/lge/g2-common/include
@@ -25,7 +29,7 @@ TARGET_BOARD_PLATFORM_GPU := qcom-adreno330
 TARGET_CPU_ABI := armeabi-v7a
 TARGET_CPU_ABI2 := armeabi
 TARGET_CPU_VARIANT := krait
-ARGET_USE_QCOM_BIONIC_OPTIMIZATION := true
+TARGET_USE_QCOM_BIONIC_OPTIMIZATION := true
 
 # Krait optimizations
 #TARGET_USE_KRAIT_BIONIC_OPTIMIZATION := true
@@ -45,7 +49,6 @@ BOARD_CUSTOM_BOOTIMG := true
 BOARD_CUSTOM_BOOTIMG_MK := device/lge/g2-common/releasetools/mkbootimg.mk
 BOARD_KERNEL_BASE := 0x00000000
 BOARD_KERNEL_CMDLINE := console=ttyHSL0,115200,n8 androidboot.hardware=g2 user_debug=31 msm_rtb.filter=0x0 mdss_mdp.panel=1:dsi:0:qcom,mdss_dsi_g2_lgd_cmd
-BOARD_KERNEL_CMDLINE += androidboot.selinux=permissive
 BOARD_KERNEL_PAGESIZE := 2048
 BOARD_KERNEL_SEPARATED_DT := true
 BOARD_MKBOOTIMG_ARGS := --ramdisk_offset 0x05000000 --tags_offset 0x00000100
@@ -88,7 +91,6 @@ ifeq ($(HOST_OS),linux)
     endif
   endif
 endif
-DONT_DEXPREOPT_PREBUILTS := true
 
 # Display
 HAVE_ADRENO_SOURCE := false
