@@ -96,8 +96,13 @@ PRODUCT_PACKAGES += \
 
 # Camera
 PRODUCT_PACKAGES += \
-    Snap \
     camera.msm8974
+
+# Snapdragon Apps
+PRODUCT_PACKAGES += \
+    SnapdragonCamera \
+    SnapdragonGallery \
+    SnapdragonMusic
 
 # Charger
 PRODUCT_PACKAGES += \
