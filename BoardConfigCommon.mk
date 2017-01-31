@@ -13,7 +13,10 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 #
-
+# Toolchain
+TARGET_GCC_VERSION_EXP := 4.9
+KERNEL_TOOLCHAIN_PREFIX := arm-eabi-
+KERNEL_TOOLCHAIN := "$(ANDROID_BUILD_TOP)/prebuilts/gcc/$(HOST_OS)-x86/arm/arm-eabi-5.x/bin/"
 
 TARGET_SPECIFIC_HEADER_PATH := device/lge/g2-common/include
 
